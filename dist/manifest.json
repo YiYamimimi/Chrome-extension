@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "AI辅助学习助手",
+  "version": "1.0.0",
+  "description": "A Chrome extension built with React and Vite",
+  "permissions": [
+    "sidePanel",
+    "tabs",
+    "webRequest",
+    "storage",
+    "https://*/*"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content.ts-loader-DIoCkgHY.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "action": {
+    "default_title": "打开侧边栏"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "assets/index-OoCF2Zy_.js",
+        "assets/content.ts-LkxQGCEh.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
